@@ -16,14 +16,14 @@ const techLinks = {
 const Home = () => {
   return (
     <section className="min-h-screen px-4 pt-44 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white flex items-center justify-center">
-      <div className="relative flex justify-center w-full max-w-4xl">
-        
-        {/* ✅ Centered Floating Image */}
+      <div className="relative w-full max-w-4xl flex flex-col items-center">
+
+        {/* ✅ Centered Floating Profile Image */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute -top-36 z-10"
+          className="z-10 -mt-36 mb-[-125px]"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -37,51 +37,84 @@ const Home = () => {
           </motion.div>
         </motion.div>
 
-        {/* ✅ Card Container */}
+        {/* ✅ Card */}
         <div className="w-full bg-white/80 dark:bg-darkbg/70 backdrop-blur-md rounded-[32px] shadow-2xl ring-1 ring-black/5 px-6 pt-40 pb-14 text-center">
-          
+
+          {/* Heading */}
           <motion.h1
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-3xl md:text-4xl font-extrabold mt-14 mb-2 bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent font-sans"
+            className="text-3xl md:text-4xl font-extrabold mt-2 mb-2 bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent font-sans"
           >
-            Hi, I’m Fatemeh Fouladi Mahani
+            Hi, I’m Fatemeh Fouladi Mahani <span className="text-primary text-2xl">🤗</span>
           </motion.h1>
 
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mb-6"
+            className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mb-4"
           >
             👩‍💻 Front-End Developer | 🎓 Ph.D. in Electrical Engineering | 🎨 UI/UX Aesthete
           </motion.h2>
 
-          <motion.p
+          <motion.hr
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ delay: 0.95, duration: 0.4 }}
+            className="w-2/3 mx-auto border-t border-gray-300 dark:border-gray-600 mb-6"
+          />
+
+          {/* Description Paragraphs */}
+          <div className="text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200 mb-6 space-y-4">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.0, duration: 0.5 }}
+            >
+              I am a <strong>detail-oriented and passionate Front-End Developer</strong> building <strong>modern</strong>, <strong>elegant</strong> websites that are <strong>clean</strong>, <strong>fully responsive</strong>, and delightful to use.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1, duration: 0.5 }}
+            >
+              I love blending <strong>engineering precision</strong> with <strong>UI/UX creativity</strong> to solve real-world problems with thoughtful digital design.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+            >
+              From academic research to full-stack projects, I bring ideas to life on the web. 💡
+            </motion.p>
+          </div>
+
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.6 }}
-            className="text-sm md:text-base leading-relaxed text-center text-gray-800 dark:text-gray-200 mb-6"
+            transition={{ delay: 1.3, duration: 0.4 }}
           >
-            I build <strong>modern</strong>, <strong>accessible</strong> websites that are <strong>clean, responsive</strong>, and a joy to use. <br />
-            I love blending engineering precision with UI/UX creativity. <br />
-            From research to real-world deployment — I bring ideas to life on the web. 💡
-            <br /><br />
-            <Link to="/about" className="text-primary font-semibold underline hover:opacity-80">
+            <Link to="/about" className="text-primary font-semibold underline hover:opacity-80 block mb-6">
               Learn more about me in the About section →
             </Link>
-          </motion.p>
+          </motion.div>
 
-          <motion.p
+          {/* Divider */}
+          <div className="border-t border-gray-300 dark:border-gray-600 w-2/3 mx-auto my-6"></div>
+
+          {/* Skills Heading */}
+          <motion.h3
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.1, duration: 0.5 }}
-            className="text-sm md:text-base text-center mb-3 text-gray-800 dark:text-gray-300"
+            transition={{ delay: 1.4, duration: 0.5 }}
+            className="text-lg md:text-xl font-semibold text-gray-800 dark:text-gray-300 mb-5"
           >
-            ⚙️ Technologies and tools I use:
-          </motion.p>
+            ⚙️ My Core Skills & Tools:
+          </motion.h3>
 
+          {/* Tech List */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -90,7 +123,7 @@ const Home = () => {
               visible: {
                 opacity: 1,
                 transition: {
-                  delayChildren: 1.2,
+                  delayChildren: 1.5,
                   staggerChildren: 0.08
                 }
               }
@@ -111,10 +144,11 @@ const Home = () => {
             ))}
           </motion.div>
 
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4, duration: 0.6 }}
+            transition={{ delay: 1.7, duration: 0.6 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
             <Link

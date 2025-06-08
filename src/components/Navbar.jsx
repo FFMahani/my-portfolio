@@ -1,57 +1,52 @@
-import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export const Navbar = ({ menuOpen, setMenuOpen }) => {
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-  }, [menuOpen]);
+const Navbar = () => {
+  const location = useLocation();
+
+  const navItems = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/projects", label: "Projects" },
+    { path: "/contact", label: "Contact" },
+    { path: "/cv", label: "CV" },
+  ];
+
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
-            {" "}
-            pedro<span className="text-blue-500">.tech</span>{" "}
-          </a>
+    <header className="fixed top-0 left-0 w-full z-[9999] bg-navbar-gradient text-white shadow-xl">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Brand */}
+        <h1 className="text-3xl font-extrabold text-white tracking-wider">
+          Fatemeh
+        </h1>
 
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            &#9776;
-          </div>
+        {/* Navigation */}
+        <nav className="flex space-x-8 text-lg font-medium tracking-wide">
+          {navItems.map((item) => {
+            const isActive = location.pathname === item.path;
 
-          <div className="hidden md:flex items-center space-x-8">
-            <a
-              href="#home"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              About{" "}
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Projects{" "}
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-300 hove:text-white transition-colors"
-            >
-              {" "}
-              Contact{" "}
-            </a>
-          </div>
-        </div>
+            return (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`relative group transition duration-300 ${
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-white/80 hover:text-white"
+                }`}
+              >
+                {item.label}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300 ${
+                    isActive ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                ></span>
+              </Link>
+            );
+          })}
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
+
+export default Navbar;

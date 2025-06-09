@@ -16,15 +16,15 @@ const techLinks = {
 
 const Home = () => {
   return (
-    <section className="min-h-screen px-4 pt-44 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white flex items-center justify-center">
-      <div className="relative flex flex-col items-center w-full max-w-5xl">
+    <section className="min-h-screen px-4 pt-60 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white flex flex-col items-center justify-start">
+      <div className="relative w-full max-w-5xl flex flex-col items-center">
 
         {/* Profile Image */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="absolute -top-28 z-20"
+          className="absolute -top-36 z-30"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -33,13 +33,13 @@ const Home = () => {
             <img
               src={`${import.meta.env.BASE_URL}profile.jpg`}
               alt="Fatemeh Fouladi Mahani"
-              className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-lg"
+              className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-full border-4 border-white shadow-xl"
             />
           </motion.div>
         </motion.div>
 
-        {/* Card 1: Intro */}
-        <div className="w-full mt-40 bg-white/80 dark:bg-darkbg/70 backdrop-blur-md rounded-[32px] shadow-2xl ring-1 ring-black/5 px-6 py-14 text-center max-w-4xl">
+        {/* Intro Card */}
+        <div className="w-full mt-44 bg-white/80 dark:bg-darkbg/70 backdrop-blur-md rounded-[32px] shadow-2xl ring-1 ring-black/5 px-6 py-14 text-center max-w-4xl">
           <motion.h1
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,8 +87,8 @@ const Home = () => {
           </motion.p>
         </div>
 
-        {/* Card 2: Tools */}
-        <div className="w-full mt-10 bg-white/70 dark:bg-darkbg/60 backdrop-blur-md rounded-[24px] shadow-xl ring-1 ring-black/5 px-6 py-10 text-center max-w-4xl">
+        {/* Skills Card */}
+        <div className="w-full mt-12 max-w-4xl bg-white/80 dark:bg-darkbg/70 backdrop-blur-md rounded-[28px] shadow-xl px-6 py-10 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={{ hidden: { y: 10, opacity: 0 }, visible: { y: 0, opacity: 1 } }}
-                className="px-3 py-1 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full shadow hover:bg-gray-400 dark:hover:bg-gray-600 hover:scale-105 transition-all"
+                className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full shadow hover:bg-gray-300 hover:scale-105 transition-all"
               >
                 {tech}
               </motion.a>
@@ -135,11 +135,11 @@ const Home = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6, duration: 0.6 }}
-          className="flex flex-col sm:flex-row justify-center gap-4 mt-8"
+          className="flex flex-col sm:flex-row justify-center gap-4 mt-10"
         >
           <Link
             to="/projects"
-            className="bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] text-white px-6 py-3 rounded-full shadow-lg hover:brightness-110 hover:scale-110 transition-all font-semibold"
+            className="bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] text-white px-6 py-3 rounded-full shadow-md hover:brightness-110 hover:scale-105 transition-all font-semibold"
           >
             🚀 View Projects
           </Link>
@@ -148,14 +148,14 @@ const Home = () => {
             href="https://github.com/FFMahani"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 rounded-full font-semibold shadow-lg text-white bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] hover:brightness-110 hover:scale-110 transition-all"
+            className="px-6 py-3 rounded-full font-semibold shadow-md text-white bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] hover:brightness-110 hover:scale-105 transition-all"
           >
             💻 Visit GitHub
           </a>
 
           <Link
             to="/cv"
-            className="px-6 py-3 rounded-full font-semibold shadow-lg text-white bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] hover:brightness-110 hover:scale-110 transition-all"
+            className="px-6 py-3 rounded-full font-semibold shadow-md text-white bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] hover:brightness-110 hover:scale-105 transition-all"
           >
             📄 Explore Resume
           </Link>

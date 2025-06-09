@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import logo from "/logo.png"; // Adjust path if necessary
 
 const Navbar = () => {
   const location = useLocation();
@@ -8,16 +9,21 @@ const Navbar = () => {
     { path: "/about", label: "About" },
     { path: "/projects", label: "Projects" },
     { path: "/contact", label: "Contact" },
-    { path: "/cv", label: "CV" },
+    { path: "/resume", label: "Resume" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-[9999] bg-navbar-gradient text-white shadow-xl">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Brand */}
-        <h1 className="text-3xl font-extrabold text-white tracking-wider">
-          Fatemeh
-        </h1>
+        
+        {/* Brand Logo */}
+        <Link to="/" className="flex items-center">
+          <img
+            src={logo}
+            alt="Fouladi Dev Logo"
+            className="h-12 w-auto object-contain"
+          />
+        </Link>
 
         {/* Navigation */}
         <nav className="flex space-x-8 text-lg font-medium tracking-wide">

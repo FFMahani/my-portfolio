@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import CV from "./pages/CV";
+import Resume from "./pages/Resume";
 
 function App() {
   useScrollToTop();
@@ -19,7 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/cv" element={<CV />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
     </MainLayout>
   );

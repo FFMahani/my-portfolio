@@ -1,8 +1,8 @@
-const CV = () => {
+const Resume = () => {
   return (
     <section className="min-h-screen px-4 py-16 bg-white text-gray-800">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">CV & Resume</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Resume</h1>
 
         {/* Download Links */}
         <div className="flex justify-center gap-6 mb-12 flex-wrap">
@@ -53,4 +53,4 @@ const CV = () => {
   );
 };
 
-export default CV;
+export default Resume;

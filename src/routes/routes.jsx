@@ -26,9 +26,9 @@ const routes = [
     element: <Contact />,
   },
   {
-    path: "/cv",
-    label: "CV",
-    element: <CV />,
+    path: "/resume",
+    label: "Resume",
+    element: <Resume />,
   },
 ];
 

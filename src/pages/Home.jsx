@@ -164,14 +164,14 @@ const Home = () => {
             rel="noopener noreferrer"
             className="px-7 py-4 text-lg font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] hover:scale-110 hover:saturate-150 hover:shadow-2xl transition-all"
           >
-            📄 Explore Resume
+            💻 Visit GitHub
           </a>
 
           <Link
-            to="/cv"
+            to="/resume"
             className="px-7 py-4 text-lg font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#f43f5e] via-[#ec4899] to-[#a855f7] hover:scale-110 hover:saturate-150 hover:shadow-2xl transition-all"
           >
-            💻 Visit GitHub
+            📄 Explore Resume
           </Link>
         </motion.div>
       </div>

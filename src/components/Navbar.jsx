@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "/logo.png";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showClose, setShowClose] = useState(false);
+
+  useEffect(() => {
+    if (menuOpen) {
+      const timer = setTimeout(() => setShowClose(true), 400); // delay less than slide-in duration
+      return () => clearTimeout(timer);
+    } else {
+      setShowClose(false); // instantly hide on close
+    }
+  }, [menuOpen]);
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -17,10 +27,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-[9999] bg-navbar-gradient text-white shadow-xl">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-        {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="Fouladi Dev Logo" className="h-12 w-auto object-contain" />
+        {/* Brand Logo */}
+        <Link to="/" className="flex items-center z-[10001]">
+          <img
+            src={logo}
+            alt="Fouladi Dev Logo"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -32,7 +45,9 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 className={`relative group transition duration-300 ${
-                  isActive ? "text-white font-bold" : "text-white/80 hover:text-white"
+                  isActive
+                    ? "text-white font-bold"
+                    : "text-white/80 hover:text-white"
                 }`}
               >
                 {item.label}
@@ -46,30 +61,58 @@ const Navbar = () => {
           })}
         </nav>
 
-        {/* Burger Icon (Mobile) */}
-        <button
-          className="md:hidden text-3xl"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? "✕" : "☰"}
-        </button>
+        {/* Burger Icon */}
+        {!menuOpen && (
+          <div className="md:hidden fixed top-6 right-6 z-[10001] w-10 h-10">
+            <button
+              onClick={() => setMenuOpen(true)}
+              className="text-3xl"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-[72px] left-0 w-full bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] text-white text-center py-6 space-y-4 shadow-2xl transition-all">
+      {/* Overlay */}
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-[10000]"
+          onClick={() => setMenuOpen(false)}
+        ></div>
+      )}
+
+      {/* Sliding Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-4/5 sm:w-2/5 bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] text-white z-[10001] transform ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-500 ease-in-out`}
+      >
+        <div className="flex flex-col justify-center items-center h-full space-y-8 text-xl font-semibold tracking-wide">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              onClick={() => setIsOpen(false)}
-              className={`block text-lg font-semibold ${
-                location.pathname === item.path ? "text-white font-bold" : "text-white/90 hover:text-white"
-              }`}
+              className="hover:scale-105 hover:opacity-90 transition"
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </Link>
           ))}
+        </div>
+      </div>
+
+      {/* Close Icon - Delayed render */}
+      {showClose && (
+        <div className="md:hidden fixed top-6 right-6 z-[10002] w-10 h-10">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="text-3xl text-white"
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
         </div>
       )}
     </header>

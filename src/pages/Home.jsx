@@ -13,9 +13,13 @@ const techLinks = {
   Bootstrap: "https://getbootstrap.com",
   Git: "https://git-scm.com",
   GitHub: "https://github.com",
-  Python: "https://www.python.org",
-  MATLAB: "https://www.mathworks.com/products/matlab.html",
   Figma: "https://www.figma.com",
+  "GitHub Pages": "https://pages.github.com/",
+  "Framer Motion": "https://www.framer.com/motion/",
+  "React Router": "https://reactrouter.com/",
+  JSX: "https://reactjs.org/docs/introducing-jsx.html",
+  Canva: "https://www.canva.com",
+  "UI/UX Design": "https://uxdesign.cc/",
 };
 
 const Home = () => {
@@ -94,17 +98,16 @@ const Home = () => {
             <div className="w-20 h-1 bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-4 rounded" />
             <p className="text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
               I am a detail-oriented and passionate{" "}
-              <strong>Front-End Developer</strong> with a
-              <strong> Ph.D. in Electrical Engineering</strong> and{" "}
+              <strong>Front-End Developer</strong> with a{" "}
+              <strong>Ph.D. in Electrical Engineering</strong> and{" "}
               <strong>8+ years</strong> of experience in research, programming,
-              simulation, and design. Proficient in
-              <strong> React (Router, Hooks, JSX)</strong>,{" "}
-              <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and{" "}
-              <strong>Bootstrap 5</strong>, as well as core technologies like{" "}
-              <strong>HTML5</strong>, <strong>CSS3</strong>, and{" "}
-              <strong>JavaScript (ES6+)</strong>, I specialize in building{" "}
-              <strong>fully responsive</strong>, accessible, and visually
-              polished web interfaces.
+              simulation, and design. Proficient in{" "}
+              <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>
+              , <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>,
+              as well as core technologies like <strong>HTML5</strong>,{" "}
+              <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I
+              specialize in building <strong>fully responsive</strong>,
+              accessible, and visually polished web interfaces.
             </p>
             <div className="mt-4">
               <Link

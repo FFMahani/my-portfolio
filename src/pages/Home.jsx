@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
@@ -18,6 +19,8 @@ const techLinks = {
 };
 
 const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const outerGradient =
     "bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c]";
   const innerGradient =
@@ -26,9 +29,30 @@ const Home = () => {
     "p-[6px] rounded-full shadow-2xl w-48 h-48 md:w-60 md:h-60 flex items-center justify-center transition-transform duration-300 hover:scale-105";
 
   return (
-    <section className="min-h-screen px-4 pt-10 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white">
+    <section className="min-h-screen px-4 pt-10 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white relative overflow-x-hidden">
+      <div
+        className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 z-[9998] transform transition-transform duration-300 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        } bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] shadow-2xl p-8`}
+      >
+        <nav className="flex flex-col items-center justify-center space-y-6 mt-24 text-white text-lg font-semibold">
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+          <Link to="/projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </Link>
+          <Link to="/resume" onClick={() => setMenuOpen(false)}>
+            Resume
+          </Link>
+        </nav>
+      </div>
+
       <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-16">
-        {/* 🔷 Intro Card */}
+        {/* Intro Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +117,7 @@ const Home = () => {
           </div>
         </motion.div>
 
-        {/* 🔷 Skills Card */}
+        {/* Skills Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

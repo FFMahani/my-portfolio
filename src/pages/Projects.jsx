@@ -55,18 +55,22 @@ const Projects = () => {
             >
               {/* Image with padding and better height */}
               <div className="p-4 pb-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-72 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
-                />
+                <div className="w-full p-4 pt-6 flex justify-center items-center bg-white">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="max-h-48 sm:max-h-56 object-contain w-full transition-transform duration-300 hover:scale-105 rounded-xl"
+                  />
+                </div>
               </div>
 
               <div className="px-6 pt-4 pb-6 flex flex-col h-full">
                 <h2 className="text-xl font-bold text-primary mb-2">
                   {project.title}
                 </h2>
-                <p className="text-sm text-gray-700 mb-4">{project.description}</p>
+                <p className="text-sm text-gray-700 mb-4">
+                  {project.description}
+                </p>
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (

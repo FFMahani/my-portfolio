@@ -1,84 +1,94 @@
+import { motion } from "framer-motion";
+
 const projects = [
+  {
+    title: "TechStore E-commerce UI",
+    description:
+      "A modern e-commerce frontend built with React and Bootstrap. Includes product UI, login/signup simulation, and responsive layout.",
+    link: "https://ffmahani.github.io/techstore-frontend/#/",
+    image: "public/techstore.png",
+    tags: ["React", "Bootstrap", "UI/UX", "E-commerce"],
+  },
+  {
+    title: "Agency Website",
+    description:
+      "My first front-end project, coded from scratch using HTML, CSS, and JavaScript. A clean responsive homepage based on a reference image.",
+    link: "https://ffmahani.github.io/agency-website-project/",
+    image: "public/agency.png",
+    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
+  },
   {
     title: "Personal Portfolio Website",
     description:
       "A fully responsive React-based portfolio showcasing my profile, projects, and contact information. Styled with Tailwind CSS, animated with Framer Motion, and deployed on GitHub Pages.",
     link: "https://ffmahani.github.io/my-portfolio/",
-    image: "/images/portfolio.png",
+    image: "public/portfolio.png",
     tags: ["React", "Tailwind CSS", "Responsive", "GitHub Pages"],
   },
   {
     title: "To-Do List App",
     description:
-      "A sleek and minimalistic task management app with priority levels, edit/save/delete, and full drag-and-drop functionality using dnd-kit. Built in React and styled with Tailwind CSS.",
+      "A minimalistic task manager app with priority, drag-and-drop (dnd-kit), edit/delete, and local storage. Built in React + Tailwind CSS.",
     link: "https://ffmahani.github.io/todo-app/",
-    image: "/todo.png",
-    tags: ["React", "Tailwind CSS"],
-  },
-  {
-    title: "Agency Website",
-    description:
-      "My first front-end website built from scratch using HTML, CSS, and JavaScript. Fully responsive layout mimicking a modern agency homepage design.",
-    link: "https://ffmahani.github.io/agency-website/",
-    image: "/agency.png",
-    tags: ["HTML", "CSS", "JavaScript", "Responsive"],
-  },
-  {
-    title: "TechStore E-commerce UI",
-    description:
-      "A modern React + Bootstrap-based e-commerce frontend demo with product carousel, login/signup simulation, client-side validation, and responsive design.",
-    link: "https://ffmahani.github.io/techstore-frontend/#/",
-    image: "public/techstore.png",
-    tags: ["React", "Bootstrap", "E-commerce", "UI/UX"],
+    image: "public/todo.png",
+    tags: ["React", "Tailwind CSS", "Productivity"],
   },
 ];
 
 const Projects = () => {
   return (
-    <section className="min-h-screen px-4 py-16 bg-white text-gray-800">
+    <section className="min-h-screen px-4 pt-14 pb-20 bg-white text-gray-800">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-primary mb-10">
-          My Projects
+        <h1 className="text-3xl md:text-4xl font-extrabold text-primary mb-12">
+          Selected Projects
         </h1>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-2">
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-lightbg border border-gray-200 rounded-lg shadow hover:shadow-xl transition p-4 text-left flex flex-col justify-between"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden flex flex-col text-left hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1"
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg mb-4 h-40 object-cover w-full"
-              />
-              <div>
-                <h2 className="text-xl font-semibold text-primary mb-2">
+              {/* Image with padding and better height */}
+              <div className="p-4 pb-0">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-72 object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+
+              <div className="px-6 pt-4 pb-6 flex flex-col h-full">
+                <h2 className="text-xl font-bold text-primary mb-2">
                   {project.title}
                 </h2>
-                <p className="text-sm text-gray-700 mb-3">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <p className="text-sm text-gray-700 mb-4">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full"
+                      className="text-xs px-3 py-1 bg-gradient-to-br from-[#e0f3fc] via-[#cbe7f9] to-[#f0f9ff] text-primary border border-blue-300 rounded-full font-semibold transition-transform duration-200 hover:scale-105"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
+
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-center px-6 py-3 text-sm font-bold text-white rounded-full bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] hover:scale-105 hover:shadow-lg transition-all"
+                >
+                  🔗 View Project
+                </a>
               </div>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto inline-block text-sm bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition"
-              >
-                View Project
-              </a>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

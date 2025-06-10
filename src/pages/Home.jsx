@@ -60,7 +60,7 @@ const Home = () => {
               speed={50}
               omitDeletionAnimation={true}
               repeat={Infinity}
-              className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent"
+              className="text-lg sm:text-xl md:text-4xl font-extrabold bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent text-center lg:text-left"
             />
 
             <h2 className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mt-4 mb-4">
@@ -69,14 +69,18 @@ const Home = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-4 rounded" />
             <p className="text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
-              I am a <strong>detail-oriented</strong> and{" "}
-              <strong>passionate Front-End Developer</strong> building{" "}
-              <strong>modern</strong>, <strong>elegant websites</strong> that
-              are clean, fully responsive, and delightful to use. I love
-              blending <strong>engineering precision</strong> with{" "}
-              <strong>UI/UX creativity</strong> to solve real-world problems
-              with thoughtful digital design. From academic research to
-              full-stack projects — I bring ideas to life on the web. 💡
+              I am a detail-oriented and passionate{" "}
+              <strong>Front-End Developer</strong> with a
+              <strong> Ph.D. in Electrical Engineering</strong> and{" "}
+              <strong>8+ years</strong> of experience in research, programming,
+              simulation, and design. Proficient in
+              <strong> React (Router, Hooks, JSX)</strong>,{" "}
+              <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and{" "}
+              <strong>Bootstrap 5</strong>, as well as core technologies like{" "}
+              <strong>HTML5</strong>, <strong>CSS3</strong>, and{" "}
+              <strong>JavaScript (ES6+)</strong>, I specialize in building{" "}
+              <strong>fully responsive</strong>, accessible, and visually
+              polished web interfaces.
             </p>
             <div className="mt-4">
               <Link

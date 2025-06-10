@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
 
 const techLinks = {
   React: "https://reactjs.org",
@@ -46,11 +47,23 @@ const Home = () => {
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-extrabold mb-3 bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent font-sans">
-              Hi, I’m Fatemeh Fouladi Mahani{" "}
-              <span className="text-2xl text-primary">🤗</span>
-            </h1>
-            <h2 className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mb-4">
+            <TypeAnimation
+              sequence={[
+                "Welcome to My Portfolio...",
+                2500,
+                "I'm Fatemeh Fouladi Mahani",
+                2500,
+                "A Passionate Front-End Developer",
+                2500,
+              ]}
+              wrapper="h1"
+              speed={50}
+              omitDeletionAnimation={true}
+              repeat={Infinity}
+              className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent"
+            />
+
+            <h2 className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mt-4 mb-4">
               👩‍💻 Front-End Developer | 🎓 Ph.D. in Electrical Engineering | 🎨
               UI/UX Aesthete
             </h2>

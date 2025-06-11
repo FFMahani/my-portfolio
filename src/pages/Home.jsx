@@ -41,10 +41,18 @@ const Home = () => {
         } bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] shadow-2xl p-[2rem]`}
       >
         <nav className="flex flex-col items-center justify-center space-y-[1.5rem] mt-[6rem] text-white text-[1.125rem] font-semibold">
-          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
-          <Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link>
+          <Link to="/" onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
+          <Link to="/projects" onClick={() => setMenuOpen(false)}>
+            Projects
+          </Link>
+          <Link to="/resume" onClick={() => setMenuOpen(false)}>
+            Resume
+          </Link>
         </nav>
       </div>
 
@@ -74,8 +82,6 @@ const Home = () => {
                 2500,
                 "I'm Fatemeh Fouladi Mahani",
                 2500,
-                "Eager Frontend Developer",
-                2500,
               ]}
               wrapper="h1"
               speed={50}
@@ -92,10 +98,23 @@ const Home = () => {
 
             <div className="w-[5rem] h-[0.25rem] bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-[1rem] rounded mx-auto lg:mx-0" />
             <p className="text-[0.875rem] md:text-[1rem] leading-relaxed text-gray-800 dark:text-gray-200 space-y-[1rem]">
-              I am a detail-oriented and passionate <strong>Front-End Developer</strong> with a <strong>Ph.D. in Electrical Engineering</strong> and <strong>8+ years</strong> of experience in research, programming, simulation, and design. Proficient in <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>, as well as core technologies like <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I specialize in building <strong>fully responsive</strong>, accessible, and visually polished web interfaces.
+              I am a detail-oriented and passionate{" "}
+              <strong>Front-End Developer</strong> with a{" "}
+              <strong>Ph.D. in Electrical Engineering</strong> and{" "}
+              <strong>8+ years</strong> of experience in research, programming,
+              simulation, and design. Proficient in{" "}
+              <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>
+              , <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>,
+              as well as core technologies like <strong>HTML5</strong>,{" "}
+              <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I
+              specialize in building <strong>fully responsive</strong>,
+              accessible, and visually polished web interfaces.
             </p>
             <div className="mt-[1rem]">
-              <Link to="/about" className="text-primary font-semibold underline hover:text-blue-900">
+              <Link
+                to="/about"
+                className="text-primary font-semibold underline hover:text-blue-900"
+              >
                 Learn more about me in the About section →
               </Link>
             </div>
@@ -116,7 +135,7 @@ const Home = () => {
                 className={`w-full h-full ${innerGradient} border-[0.25rem] border-white rounded-full flex items-center justify-center text-center px-[1rem]`}
               >
                 <div className="text-white text-[1.125rem] md:text-[1.25rem] font-bold leading-snug">
-                  ⚙️ My Core Skills <br />& Tools:
+                  ⚙️ My Core Skills <br />and Tools:
                 </div>
               </div>
             </div>

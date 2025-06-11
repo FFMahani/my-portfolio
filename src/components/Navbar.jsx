@@ -26,13 +26,13 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-[9999] bg-navbar-gradient text-white shadow-xl">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-[1.5rem] py-[1rem] flex justify-between items-center">
         {/* Brand Logo */}
         <Link to="/" className="flex items-center z-[10001]">
           <img
             src={logo}
             alt="Fouladi Dev Logo"
-            className="h-12 w-auto object-contain"
+            className="h-[3rem] w-auto object-contain"
           />
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
 
         {/* Burger Icon */}
         {!menuOpen && (
-          <div className="md:hidden fixed top-6 right-6 z-[10001] w-10 h-10">
+          <div className="md:hidden fixed top-[1.5rem] right-[1.5rem] z-[10001] w-[2.5rem] h-[2.5rem]">
             <button
               onClick={() => setMenuOpen(true)}
               className="text-3xl"
@@ -105,7 +105,7 @@ const Navbar = () => {
 
       {/* Close Icon - Delayed render */}
       {showClose && (
-        <div className="md:hidden fixed top-6 right-6 z-[10002] w-10 h-10">
+        <div className="md:hidden fixed top-[1.5rem] right-[1.5rem] z-[10002] w-[2.5rem] h-[2.5rem]">
           <button
             onClick={() => setMenuOpen(false)}
             className="text-3xl text-white"

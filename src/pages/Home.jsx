@@ -30,90 +30,72 @@ const Home = () => {
   const innerGradient =
     "bg-gradient-to-br from-[#a5e2e2] via-[#4ca7d8] to-[#ccefff]";
   const circleClass =
-    "p-[6px] rounded-full shadow-2xl w-48 h-48 md:w-60 md:h-60 flex items-center justify-center transition-transform duration-300 hover:scale-105";
+    "p-[0.375rem] rounded-full shadow-2xl w-[12rem] h-[12rem] md:w-[15rem] md:h-[15rem] flex items-center justify-center transition-transform duration-300 hover:scale-105";
 
   return (
-    <section className="min-h-screen px-4 pt-10 pb-20 bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white relative overflow-x-hidden">
+    <section className="min-h-screen px-[1rem] pt-[2.5rem] pb-[5rem] bg-gradient-to-br from-[#e0f7ff] to-white dark:from-darkbg dark:to-black text-gray-900 dark:text-white relative overflow-x-hidden">
+      {/* Mobile Nav */}
       <div
         className={`fixed top-0 right-0 h-full w-3/4 sm:w-1/2 z-[9998] transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
-        } bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] shadow-2xl p-8`}
+        } bg-gradient-to-br from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] shadow-2xl p-[2rem]`}
       >
-        <nav className="flex flex-col items-center justify-center space-y-6 mt-24 text-white text-lg font-semibold">
-          <Link to="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </Link>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </Link>
-          <Link to="/projects" onClick={() => setMenuOpen(false)}>
-            Projects
-          </Link>
-          <Link to="/resume" onClick={() => setMenuOpen(false)}>
-            Resume
-          </Link>
+        <nav className="flex flex-col items-center justify-center space-y-[1.5rem] mt-[6rem] text-white text-[1.125rem] font-semibold">
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+          <Link to="/resume" onClick={() => setMenuOpen(false)}>Resume</Link>
         </nav>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-16">
+      <div className="max-w-[80rem] mx-auto flex flex-col items-center justify-center gap-[4rem]">
         {/* Intro Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-full bg-white/90 dark:bg-darkbg/70 backdrop-blur-md rounded-[32px] shadow-2xl ring-1 ring-black/5 px-8 py-10 grid grid-cols-1 lg:grid-cols-[auto_1fr] items-center gap-10"
+          className="w-full bg-white/90 dark:bg-darkbg/70 backdrop-blur-md rounded-[2rem] shadow-2xl ring-1 ring-black/5 px-[2rem] py-[2.5rem] grid grid-cols-1 lg:grid-cols-[auto_1fr] items-center gap-[2.5rem]"
         >
           <div className="flex items-center justify-center">
             <div className={`${circleClass} ${outerGradient}`}>
               <img
                 src={`${import.meta.env.BASE_URL}profile.jpg`}
                 alt="Fatemeh Fouladi Mahani"
-                className="w-full h-full object-cover rounded-full border-4 border-white"
+                className="w-full h-full object-cover rounded-full border-[0.25rem] border-white"
               />
             </div>
           </div>
 
-          <div>
+          <div className="text-center lg:text-left">
             <TypeAnimation
               sequence={[
                 "Welcome to My Portfolio...",
                 2500,
                 "I'm Fatemeh Fouladi Mahani",
                 2500,
-                "A Passionate Front-End Developer",
+                "Frontend Developer | PhD Engineer",
                 2500,
               ]}
               wrapper="h1"
               speed={50}
               omitDeletionAnimation={true}
               repeat={Infinity}
-              className="text-lg sm:text-xl md:text-4xl font-extrabold bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent text-center lg:text-left"
+              className="text-[1.125rem] sm:text-[1.25rem] md:text-[2.25rem] font-extrabold bg-gradient-to-r from-[#7ec4e3] via-[#0a6ab3] to-[#073b7c] bg-clip-text text-transparent"
             />
 
-            <h2 className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-300 mt-4 mb-4">
-              👩‍💻 Front-End Developer | 🎓 Ph.D. in Electrical Engineering | 🎨
-              UI/UX Aesthete
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-4 rounded" />
-            <p className="text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
-              I am a detail-oriented and passionate{" "}
-              <strong>Front-End Developer</strong> with a{" "}
-              <strong>Ph.D. in Electrical Engineering</strong> and{" "}
-              <strong>8+ years</strong> of experience in research, programming,
-              simulation, and design. Proficient in{" "}
-              <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>
-              , <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>,
-              as well as core technologies like <strong>HTML5</strong>,{" "}
-              <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I
-              specialize in building <strong>fully responsive</strong>,
-              accessible, and visually polished web interfaces.
+            <div className="flex justify-center lg:justify-start items-center flex-wrap text-[1rem] md:text-[1.125rem] font-medium text-gray-700 dark:text-gray-300 mt-[1rem] mb-[1rem] gap-x-2">
+              <span>💻 Front-End Developer</span>
+              <span>| 🎓 Ph.D. in Electrical Engineering</span>
+              <span>| 🎨 UI/UX Aesthete</span>
+            </div>
+
+            <div className="w-[5rem] h-[0.25rem] bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-[1rem] rounded mx-auto lg:mx-0" />
+            <p className="text-[0.875rem] md:text-[1rem] leading-relaxed text-gray-800 dark:text-gray-200 space-y-[1rem]">
+              I am a detail-oriented and passionate <strong>Front-End Developer</strong> with a <strong>Ph.D. in Electrical Engineering</strong> and <strong>8+ years</strong> of experience in research, programming, simulation, and design. Proficient in <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>, as well as core technologies like <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I specialize in building <strong>fully responsive</strong>, accessible, and visually polished web interfaces.
             </p>
-            <div className="mt-4">
-              <Link
-                to="/about"
-                className="text-primary font-semibold underline hover:opacity-80"
-              >
+            <div className="mt-[1rem]">
+              <Link to="/about" className="text-primary font-semibold underline hover:opacity-80">
                 Learn more about me in the About section →
               </Link>
             </div>
@@ -126,14 +108,14 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9 }}
-          className="w-full bg-white/90 dark:bg-darkbg/70 backdrop-blur-md rounded-[32px] shadow-xl px-8 py-10 grid grid-cols-1 lg:grid-cols-[auto_1fr] items-center gap-10"
+          className="w-full bg-white/90 dark:bg-darkbg/70 backdrop-blur-md rounded-[2rem] shadow-xl px-[2rem] py-[2.5rem] grid grid-cols-1 lg:grid-cols-[auto_1fr] items-center gap-[2.5rem]"
         >
           <div className="flex items-center justify-center">
             <div className={`${circleClass} ${outerGradient}`}>
               <div
-                className={`w-full h-full ${innerGradient} border-4 border-white rounded-full flex items-center justify-center text-center px-4`}
+                className={`w-full h-full ${innerGradient} border-[0.25rem] border-white rounded-full flex items-center justify-center text-center px-[1rem]`}
               >
-                <div className="text-white text-lg md:text-xl font-bold leading-snug">
+                <div className="text-white text-[1.125rem] md:text-[1.25rem] font-bold leading-snug">
                   ⚙️ My Core Skills <br />& Tools:
                 </div>
               </div>
@@ -154,7 +136,7 @@ const Home = () => {
                 },
               },
             }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 justify-items-center"
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[1rem] justify-items-center"
           >
             {Object.entries(techLinks).map(([tech, link], i) => (
               <motion.a
@@ -166,7 +148,7 @@ const Home = () => {
                   hidden: { opacity: 0, y: 10 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="px-4 py-2 w-full max-w-[150px] whitespace-nowrap text-ellipsis overflow-hidden text-center text-sm md:text-base bg-gray-100 text-gray-800 rounded-full shadow hover:bg-gray-200 hover:scale-105 transition-all font-medium"
+                className="px-[1rem] py-[0.5rem] w-full max-w-[9.375rem] whitespace-nowrap text-ellipsis overflow-hidden text-center text-[0.875rem] md:text-[1rem] bg-gray-100 text-gray-800 rounded-full shadow hover:bg-gray-200 hover:scale-105 transition-all font-medium"
               >
                 {tech}
               </motion.a>
@@ -180,27 +162,25 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="flex flex-col sm:flex-row justify-center gap-6 mt-4"
+          className="flex flex-col md:flex-row flex-wrap justify-center gap-[1rem] md:gap-[1.5rem] mt-[1.5rem] mb-[2rem]"
         >
           <Link
             to="/projects"
-            className="px-7 py-4 text-lg font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#3b82f6] via-[#6366f1] to-[#8b5cf6] hover:scale-110 hover:saturate-150 hover:shadow-2xl transition-all"
+            className="px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#3b82f6] via-[#6366f1] to-[#8b5cf6] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
           >
             🚀 View Projects
           </Link>
-
           <a
             href="https://github.com/FFMahani"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-4 text-lg font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] hover:scale-110 hover:saturate-150 hover:shadow-2xl transition-all"
+            className="px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
           >
             💻 Visit GitHub
           </a>
-
           <Link
             to="/resume"
-            className="px-7 py-4 text-lg font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#f43f5e] via-[#ec4899] to-[#a855f7] hover:scale-110 hover:saturate-150 hover:shadow-2xl transition-all"
+            className="px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#f43f5e] via-[#ec4899] to-[#a855f7] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
           >
             📄 Explore Resume
           </Link>

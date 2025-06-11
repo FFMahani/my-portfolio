@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
-const projects = [
+const projects = [ 
   {
     title: "TechStore E-commerce UI",
     description:
       "A fully responsive e-commerce frontend designed from scratch to showcase smart gadgets and tech accessories for a fictional store. Built using React, React Router v6, Bootstrap 5, and custom CSS, it delivers a smooth, modern user experience with elegant UI, seamless navigation, horizontally scrollable product carousel, and simulated login/signup.",
     link: "https://ffmahani.github.io/techstore-frontend/#/",
-    image: "public/techstore.png",
+    image: `${import.meta.env.BASE_URL}techstore.png`,
     tags: ["React", "Bootstrap", "React Router", "React Hook Form", "Custom CSS"],
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     description:
       "A fully responsive landing page built with HTML, CSS, and JavaScript as a frontend implementation exercise. It recreates a static layout image from scratch using modern UI/UX and responsive design practices, featuring smooth burger menu transitions, an auto-sliding testimonial carousel with manual controls, anchor link scrolling, and a clean modular file structure.",
     link: "https://ffmahani.github.io/agency-website-project/",
-    image: "public/agency.png",
+    image: `${import.meta.env.BASE_URL}agency.png`,
     tags: ["HTML", "CSS", "Vanilla JavaScript", "Responsive Layout", "Static Image Conversion"],
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     description:
       "A modern task manager app built with React + Vite and styled using Tailwind CSS. Features include add/edit/delete, keyboard interaction, local storage, responsive layout, and a clean interface for both desktop and mobile.",
     link: "https://ffmahani.github.io/todo-app/",
-    image: "public/todo.png",
+    image: `${import.meta.env.BASE_URL}todo.png`,
     tags: ["React", "Vite", "Tailwind CSS", "Local Storage"],
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     description:
       "A showcase of my frontend journey and capabilities. Designed with attention to detail using React, Tailwind CSS, and Framer Motion. Includes responsive layout, animated interactions, themed UI, and organized project & resume sections.",
     link: "https://ffmahani.github.io/my-portfolio/",
-    image: "public/portfolio.png",
+    image: `${import.meta.env.BASE_URL}portfolio.png`,
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion"],
   },
 ];

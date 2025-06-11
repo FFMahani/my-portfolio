@@ -109,7 +109,16 @@ const About = () => {
           </h2>
           <ul className="space-y-2 pl-[1rem]">
             <li className={itemClass}>
-              Ph.D. in Electrical Engineering – GPA: 19.50/20.00
+              Ph.D. in Electrical Engineering – GPA: 19.50/20.00, Supervised by{" "}
+              <a
+                target="_blank"
+                className="underline font-medium
+             text-primary hover:text-blue-900 transition-colors"
+                href="https://scholar.google.ca/citations?user=LOIAfp8AAAAJ&hl=en"
+              >
+                Prof. Pierre Berini
+              </a>
+              {" "}(University of Ottawa)
             </li>
             <li className={itemClass}>
               M.Sc. in Electrical Engineering – GPA: 19.43/20.00
@@ -198,7 +207,7 @@ const About = () => {
                   href="https://scholar.google.com/citations?hl=en&user=e3t3zj4AAAAJ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline hover:text-blue-800 transition-colors"
+                  className="text-primary hover:text-blue-900 transition-colors"
                 >
                   🎓 View my Google Scholar profile
                 </a>
@@ -208,7 +217,7 @@ const About = () => {
                   href="https://www.linkedin.com/in/fatemeh-fouladi-mahani/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline hover:text-blue-800 transition-colors"
+                  className="text-primary hover:text-blue-900 transition-colors"
                 >
                   🌐 Connect with me on LinkedIn
                 </a>

@@ -97,7 +97,7 @@ const Home = () => {
             </div>
 
             <div className="w-[5rem] h-[0.25rem] bg-gradient-to-r from-[#4ca7d8] via-[#0a6ab3] to-[#073b7c] mb-[1rem] rounded mx-auto lg:mx-0" />
-            <p className="text-[0.875rem] md:text-[1rem] leading-relaxed text-gray-800 dark:text-gray-200 space-y-[1rem]">
+            <p className="text-[0.875rem] md:text-[1rem] leading-relaxed text-gray-800 dark:text-gray-200 space-y-[1rem] text-justify">
               I am a detail-oriented and passionate{" "}
               <strong>Front-End Developer</strong> with a{" "}
               <strong>Ph.D. in Electrical Engineering</strong> and{" "}

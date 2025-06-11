@@ -74,7 +74,7 @@ const Home = () => {
                 2500,
                 "I'm Fatemeh Fouladi Mahani",
                 2500,
-                "Frontend Developer | PhD Engineer",
+                "Eager Frontend Developer",
                 2500,
               ]}
               wrapper="h1"
@@ -95,7 +95,7 @@ const Home = () => {
               I am a detail-oriented and passionate <strong>Front-End Developer</strong> with a <strong>Ph.D. in Electrical Engineering</strong> and <strong>8+ years</strong> of experience in research, programming, simulation, and design. Proficient in <strong>React (Router, Hooks, JSX)</strong>, <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>Bootstrap 5</strong>, as well as core technologies like <strong>HTML5</strong>, <strong>CSS3</strong>, and <strong>JavaScript (ES6+)</strong>, I specialize in building <strong>fully responsive</strong>, accessible, and visually polished web interfaces.
             </p>
             <div className="mt-[1rem]">
-              <Link to="/about" className="text-primary font-semibold underline hover:opacity-80">
+              <Link to="/about" className="text-primary font-semibold underline hover:text-blue-900">
                 Learn more about me in the About section →
               </Link>
             </div>

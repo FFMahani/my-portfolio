@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
+
 import {
   FaGraduationCap,
   FaTools,
   FaAward,
   FaLanguage,
-  FaLaptopCode,
 } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -153,24 +153,24 @@ const About = () => {
               Accomplished Ph.D. in Electrical Engineering with over 8 years of research experience and a proven record of academic and research excellence. Adept in numerical simulation tools and highly proficient in applying AI/ML techniques to practical, industry-focused projects. Experienced in MATLAB and Python, with hands-on use of libraries such as NumPy, SciPy, Pandas, and scikit-learn.
             </p>
             <ul className="space-y-2 pl-[1rem]">
-              <li className={itemClass}>
+              <li>
                 <a
                   href="https://scholar.google.com/citations?hl=en&user=e3t3zj4AAAAJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline hover:text-blue-800 transition-colors"
                 >
-                  📖 View my Google Scholar profile
+                  🎓 View my Google Scholar profile
                 </a>
               </li>
-              <li className={itemClass}>
+              <li>
                 <a
                   href="https://www.linkedin.com/in/fatemeh-fouladi-mahani/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:underline hover:text-blue-800 transition-colors"
                 >
-                  💼 Connect with me on LinkedIn
+                  🌐 Connect with me on LinkedIn
                 </a>
               </li>
             </ul>

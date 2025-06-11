@@ -49,7 +49,7 @@ const Resume = () => {
           </div>
 
           {/* Engineering Card */}
-          <div className="bg-lightbg border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-2 border-transparent hover:border-secondary bg-gradient-to-b from-white to-gray-50">
+          <div className="bg-lightbg border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 border-2 border-transparent hover:border-primary bg-gradient-to-b from-white to-gray-50">
             <h2 className="text-xl font-bold text-secondary mb-4 flex items-center gap-2">
               ⚙️ Electrical Engineer
             </h2>

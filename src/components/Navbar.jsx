@@ -12,7 +12,7 @@ const Navbar = () => {
       const timer = setTimeout(() => setShowClose(true), 400); // delay less than slide-in duration
       return () => clearTimeout(timer);
     } else {
-      setShowClose(false); // instantly hide on close
+      setShowClose(false); 
     }
   }, [menuOpen]);
 

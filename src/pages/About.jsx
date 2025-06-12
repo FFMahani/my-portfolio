@@ -117,8 +117,8 @@ const About = () => {
                 href="https://scholar.google.ca/citations?user=LOIAfp8AAAAJ&hl=en"
               >
                 Prof. Pierre Berini
-              </a>
-              {" "}(University of Ottawa)
+              </a>{" "}
+              (University of Ottawa)
             </li>
             <li className={itemClass}>
               M.Sc. in Electrical Engineering – GPA: 19.43/20.00
@@ -177,6 +177,57 @@ const About = () => {
               Research Scholarship Offer – University of Ottawa (2023–2024)
             </li>
           </ul>
+        </motion.div>
+
+        {/* Related Experience */}
+        <motion.div
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className={cardClass}
+        >
+          <h2 className={titleClass}>
+            <MdWork className="text-indigo-600" />
+            Related Experience
+          </h2>
+          <div className="space-y-3 text-justify leading-relaxed text-[0.95rem] text-gray-700">
+            <p>
+              <strong>
+                <a
+                  href="https://codingfront.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline font-medium text-primary hover:text-blue-900 transition-colors"
+                >
+                  Front-End Developer Bootcamp Collaboration (6+ months)
+                </a>
+              </strong>
+              : Successfully completed a rigorous, mentor-led Bootcamp, actively
+              collaborating on advanced UI/UX projects. Engaged in pair
+              programming, agile sprints, and weekly code reviews to refine both
+              technical skills and team workflows. Gained in-depth, practical
+              experience in responsive design, state management with React,
+              custom theming with Tailwind CSS and Bootstrap, and accessibility
+              best practices. Delivered fully functional, production-ready
+              components using modern development tools, including Git and
+              GitHub for version control and team collaboration.
+            </p>
+
+            <p>
+              <strong>Freelance Portfolio Projects:</strong> Independently
+              designed and developed fully responsive, animated portfolio
+              websites using React, Tailwind CSS, and Framer Motion.
+              Demonstrated advanced problem-solving and attention to detail
+              through pixel-perfect UI implementation and real-world user
+              experience flows. Integrated dynamic routing with React Router and
+              implemented interactive form handling using EmailJS. Projects
+              highlight modern frontend best practices, including accessibility,
+              component reusability, smooth motion transitions, and responsive
+              design.
+            </p>
+          </div>
         </motion.div>
 
         {/* Engineering Background */}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
 const techLinks = {
@@ -193,16 +194,20 @@ const Home = () => {
             href="https://github.com/FFMahani"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
+            className="flex items-center justify-center gap-2 px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#1d4ed8] via-[#3b82f6] to-[#06b6d4] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
           >
-            💻 Visit GitHub
+            <FaGithub className="text-[1.25rem]" />
+            Visit GitHub
           </a>
-          <Link
-            to="/resume"
-            className="px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#f43f5e] via-[#ec4899] to-[#a855f7] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
+          <a
+            href="https://www.linkedin.com/in/fatemeh-fouladi-dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-[1.75rem] py-[1rem] text-[1rem] font-bold text-white rounded-full shadow-xl bg-gradient-to-br from-[#f43f5e] via-[#ec4899] to-[#a855f7] hover:scale-105 hover:saturate-150 hover:shadow-2xl transition-all min-w-[10rem] text-center"
           >
-            📄 Explore Resume
-          </Link>
+            <FaLinkedin className="text-[1.25rem]" />
+            Visit LinkedIn
+          </a>
         </motion.div>
       </div>
     </section>

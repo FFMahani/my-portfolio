@@ -201,7 +201,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   className="underline font-medium text-primary hover:text-blue-900 transition-colors"
                 >
-                  Front-End Developer Bootcamp Collaboration (6+ months)
+                  Front-End Developer Bootcamp Collaboration (8+ months)
                 </a>
               </strong>
               : Successfully completed a rigorous, mentor-led Bootcamp, actively

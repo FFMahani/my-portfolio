@@ -51,7 +51,7 @@ const Contact = () => {
             <FaEnvelope />
           </a>
           <a
-            href="https://linkedin.com/in/fatemeh-fouladi-mahani"
+            href="https://www.linkedin.com/in/fatemeh-fouladi-dev/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-blue-600 transition"
